@@ -69,7 +69,7 @@ export default function Hero() {
         {/* ─── Columna de imagen con efecto parallax ─── */}
         <div className="rellax mx-auto w-full max-w-lg lg:ml-auto lg:max-w-none" data-rellax-percentage="0.5">
           <video
-            src="/logo-Qualister-animación.mp4"
+            src="/qualister-logo-animation.mp4"
             autoPlay
             loop
             muted
