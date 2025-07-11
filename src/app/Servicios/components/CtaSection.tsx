@@ -14,10 +14,10 @@ export default function CtaSection() {
             para sus necesidades específicas
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
-            <button className="bg-white text-[#0A0F1A] px-6 py-3 rounded-md font-semibold hover:bg-gray-200">
+            <button className="bg-white text-[#0A0F1A] px-6 py-3 rounded-md font-semibold hover:bg-gray-200 transition">
               Solicitar Cotización
             </button>
-            <button className="bg-white text-[#0A0F1A] px-6 py-3 rounded-md font-semibold hover:bg-gray-200">
+            <button className="border border-white text-white px-6 py-3 rounded-md font-semibold hover:bg-white/10 transition">
               Agendar meet
             </button>
           </div>

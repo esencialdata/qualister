@@ -12,7 +12,7 @@ export default function Hero() {
         loop
         playsInline
       >
-        <source src="/hero-video.mp4" type="video/mp4" />
+        <source src="/Videos/Qualister-Metrologia-industrial-servicios.mp4" type="video/mp4" />
         Tu navegador no soporta el video.
       </video>
       <div className="relative z-10 text-center px-6">

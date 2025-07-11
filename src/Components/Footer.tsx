@@ -1,9 +1,12 @@
+
+
 export default function Footer() {
   return (
     <footer className="bg-[#0B1320] text-white py-12 px-6 md:px-20">
       <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-12">
         {/* Logo y descripción */}
         <div>
+          {/* eslint-disable-next-line @next/next/no-img-element */}
           <img src="/logo-qualister.svg" alt="Qualister" className="h-10 mb-4" />
           <p className="text-sm text-gray-300">
             Soluciones metrológicas de alta precisión con más de 60 años de experiencia combinada y acreditación ISO/IEC 17025.

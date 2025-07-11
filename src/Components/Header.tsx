@@ -109,34 +109,30 @@ export default function Header() {
             </div>
 
             {/* Menú móvil en pantalla completa */}
-            {menuOpen && (
-              <>
-                <button
-                  className="absolute top-6 right-6 text-white text-3xl z-50 focus:outline-none"
-                  onClick={() => setMenuOpen(false)}
-                  aria-label="Cerrar menú"
-                >
-                  &times;
-                </button>
-                <div className="lg:hidden fixed inset-0 z-40 h-screen w-screen bg-[#0b1624] text-white flex flex-col items-center justify-center text-center px-6">
-                  <ul className="space-y-8 text-2xl py-12">
-                    <li><Link href="/#inicio" className="text-white hover:text-cyan-300" onClick={() => setMenuOpen(false)}>Inicio</Link></li>
-                    <li><Link href="/Servicios" className="text-white hover:text-cyan-300" onClick={() => setMenuOpen(false)}>Servicios</Link></li>
-                    <li><a href="#por-que-qualister" className="text-white hover:text-cyan-300" onClick={() => setMenuOpen(false)}>Nosotros</a></li>
-                    <li><a href="#contacto" className="text-white hover:text-cyan-300" onClick={() => setMenuOpen(false)}>Contacto</a></li>
-                    <li>
-                      <a
-                        href="#contacto"
-                        onClick={() => setMenuOpen(false)}
-                        className="block bg-cyan-500 hover:bg-cyan-600 text-white px-6 py-3 rounded transition"
-                      >
-                        Solicitar Cotización
-                      </a>
-                    </li>
-                  </ul>
-                </div>
-              </>
-            )}
+            <div className={`lg:hidden fixed inset-0 z-40 h-screen w-screen bg-[#0b1624] text-white flex flex-col items-center justify-center text-center px-6 transition-opacity duration-300 ${menuOpen ? 'opacity-100 visible' : 'opacity-0 invisible'}`}>
+              <button
+                className="absolute top-6 right-6 text-white text-3xl z-50 focus:outline-none"
+                onClick={() => setMenuOpen(false)}
+                aria-label="Cerrar menú"
+              >
+                &times;
+              </button>
+              <ul className="space-y-8 text-2xl py-12">
+                <li><Link href="/#inicio" className="text-white hover:text-cyan-300" onClick={() => setMenuOpen(false)}>Inicio</Link></li>
+                <li><Link href="/Servicios" className="text-white hover:text-cyan-300" onClick={() => setMenuOpen(false)}>Servicios</Link></li>
+                <li><a href="#por-que-qualister" className="text-white hover:text-cyan-300" onClick={() => setMenuOpen(false)}>Nosotros</a></li>
+                <li><a href="#contacto" className="text-white hover:text-cyan-300" onClick={() => setMenuOpen(false)}>Contacto</a></li>
+                <li>
+                  <a
+                    href="#contacto"
+                    onClick={() => setMenuOpen(false)}
+                    className="block bg-cyan-500 hover:bg-cyan-600 text-white px-6 py-3 rounded transition"
+                  >
+                    Solicitar Cotización
+                  </a>
+                </li>
+              </ul>
+            </div>
           </nav>
         </div>
       </div>

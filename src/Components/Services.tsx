@@ -1,3 +1,5 @@
+import Link from 'next/link';
+
 export default function Services() {
   const DATA = [
     {
@@ -46,6 +48,8 @@ export default function Services() {
     },
   ];
 
+  const slugify = (text: string) => text.toLowerCase().replace(/\s+/g, '-').replace(/[^\w-]+/g, '');
+
   return (
     <section
       id="servicios"
@@ -63,7 +67,8 @@ export default function Services() {
               className="rounded-xl border border-slate-200 bg-white p-6 text-center shadow-sm transition hover:shadow-md"
             >
               <div className="mb-4">
-                <img src={item.icon} alt={item.title} className="mx-auto h-12 w-12" />
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img src={item.icon} alt={`Icono de ${item.title}`} className="mx-auto h-12 w-12" />
               </div>
               <h3 className="mb-2 text-base font-bold text-slate-900">
                 {item.title}
@@ -75,9 +80,9 @@ export default function Services() {
                 ))}
               </ul>
               <div className="mt-6">
-                <button className="w-full rounded border border-slate-300 px-4 py-2 text-sm font-medium text-slate-700 hover:bg-slate-50 transition">
+                <Link href={`/Servicios#${slugify(item.title)}`} className="w-full block rounded border border-slate-300 px-4 py-2 text-sm font-medium text-slate-700 hover:bg-slate-50 transition">
                   Ver Detalles
-                </button>
+                </Link>
               </div>
             </article>
           ))}

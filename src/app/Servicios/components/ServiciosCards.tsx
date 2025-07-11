@@ -2,6 +2,7 @@
 
 import React from "react";
 
+
 const servicios = [
   {
     icon: "/icon-micrometro.svg",
@@ -129,6 +130,8 @@ const servicios = [
   }
 ];
 
+const slugify = (text: string) => text.toLowerCase().replace(/\s+/g, '-').replace(/[^\w-]+/g, '');
+
 const ServiciosCards = () => {
   return (
     <section className="bg-white py-20 px-6">
@@ -142,9 +145,10 @@ const ServiciosCards = () => {
       </div>
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
         {servicios.map((servicio, index) => (
-          <div key={index} className="border border-gray-200 rounded-lg p-6 text-left shadow-sm hover:shadow-md transition">
+          <div key={index} id={slugify(servicio.title)} className="border border-gray-200 rounded-lg p-6 text-left shadow-sm hover:shadow-md transition">
             <div className="flex items-center mb-4">
-              <img src={servicio.icon} alt={servicio.title} className="w-10 h-10 mr-3" />
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img src={servicio.icon} alt={`Icono de ${servicio.title}`} className="w-10 h-10 mr-3" />
               <h3 className="text-xl font-semibold text-gray-800">
                 {servicio.title}
               </h3>
