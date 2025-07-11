@@ -31,7 +31,6 @@ export default function CtaSection() {
               transform: "translateZ(0)",
               willChange: "transform",
               backgroundImage: `url('/Qualister-CtaSection.gif')`,
-              backgroundAttachment: "fixed",
               backgroundPosition: "center",
               backgroundRepeat: "no-repeat",
               backgroundSize: "contain",
