@@ -6,7 +6,7 @@ export default function VideoBanner() {
       className="
         relative isolate
         w-full
-        bg-[#F5FAF6]
+        bg-[#F2F3F3]
         py-4 md:py-6                 /* ← padding vertical extra */
         h-[272px] md:h-[300px]       /* alto TOTAL (video + padding) */
         overflow-hidden
@@ -24,13 +24,14 @@ export default function VideoBanner() {
           className="
             h-full w-full
             object-contain            /* no desborda; respeta márgenes */
-            opacity-75
+            opacity-100
+            mix-blend-multiply
+            contrast-200
+            brightness-75
+            saturate-0
           "
         />
       </div>
-
-      {/* velo claro para suavizar el clip */}
-      <div className="absolute inset-0 bg-white/55 mix-blend-lighten pointer-events-none" />
     </section>
   );
 }
