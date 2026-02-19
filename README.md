@@ -18,6 +18,24 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
 
 You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
 
+## Contact Form (SMTP)
+
+El formulario de contacto envía correos a `ventasqlm@qlm.mx` usando la ruta `POST /api/contact`.
+
+1. Copia `.env.example` a `.env.local`.
+2. Configura credenciales SMTP válidas:
+
+```bash
+SMTP_HOST=
+SMTP_PORT=
+SMTP_USER=
+SMTP_PASS=
+SMTP_FROM=
+SMTP_SECURE=false
+```
+
+En Vercel, agrega estas mismas variables en **Project Settings > Environment Variables**.
+
 This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
 
 ## Learn More
