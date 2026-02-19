@@ -84,6 +84,16 @@ export default function Services() {
             </article>
           ))}
         </div>
+
+        <div className="mt-12 flex justify-center">
+          <Link
+            href="/Servicios"
+            className="inline-flex items-center justify-center rounded-md bg-cyan-600 px-6 py-3 text-sm font-semibold text-white transition hover:bg-cyan-700 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-cyan-600"
+            aria-label="Ir a la página completa de servicios"
+          >
+            Ver todos los servicios
+          </Link>
+        </div>
       </div>
     </section>
   );
