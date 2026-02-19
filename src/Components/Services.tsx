@@ -51,12 +51,9 @@ export default function Services() {
   const slugify = (text: string) => text.toLowerCase().replace(/\s+/g, '-').replace(/[^\w-]+/g, '');
 
   return (
-    <section
-      id="servicios"
-      className="bg-white text-slate-900 py-24"
-    >
+    <section className="bg-white text-slate-900 py-24">
       <div className="mx-auto max-w-6xl px-6">
-        <h2 className="mb-12 text-center text-3xl font-bold text-slate-900">
+        <h2 id="nuestros-servicios" className="mb-12 text-center text-3xl font-bold text-slate-900 scroll-mt-28">
           Nuestros servicios
         </h2>
 

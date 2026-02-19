@@ -93,19 +93,19 @@ export default function Header() {
                 Inicio
               </Link>
               <Link
-                href="/Servicios"
+                href="/#nuestros-servicios"
                 className={`text-white hover:text-cyan-300 transition ${currentSection === 'servicios' ? 'text-cyan-300 font-semibold' : ''}`}
               >
                 Servicios
               </Link>
-              <a href="#por-que-qualister" className={`text-white hover:text-cyan-300 transition ${currentSection === 'por-que-qualister' ? 'text-cyan-300 font-semibold' : ''}`}>Nosotros</a>
-              <a href="#contacto" className={`text-white hover:text-cyan-300 transition ${currentSection === 'contacto' ? 'text-cyan-300 font-semibold' : ''}`}>Contacto</a>
-              <a
-                href="#contacto"
+              <Link href="/#por-que-qualister" className={`text-white hover:text-cyan-300 transition ${currentSection === 'por-que-qualister' ? 'text-cyan-300 font-semibold' : ''}`}>Nosotros</Link>
+              <Link href="/#contacto" className={`text-white hover:text-cyan-300 transition ${currentSection === 'contacto' ? 'text-cyan-300 font-semibold' : ''}`}>Contacto</Link>
+              <Link
+                href="/#contacto"
                 className="inline-block bg-cyan-500 hover:bg-cyan-600 text-white px-4 py-2 rounded transition"
               >
                 Solicitar Cotización
-              </a>
+              </Link>
             </div>
 
             {/* Menú móvil en pantalla completa */}
@@ -119,17 +119,17 @@ export default function Header() {
               </button>
               <ul className="space-y-8 text-2xl py-12">
                 <li><Link href="/#inicio" className="text-white hover:text-cyan-300" onClick={() => setMenuOpen(false)}>Inicio</Link></li>
-                <li><Link href="/Servicios" className="text-white hover:text-cyan-300" onClick={() => setMenuOpen(false)}>Servicios</Link></li>
-                <li><a href="#por-que-qualister" className="text-white hover:text-cyan-300" onClick={() => setMenuOpen(false)}>Nosotros</a></li>
-                <li><a href="#contacto" className="text-white hover:text-cyan-300" onClick={() => setMenuOpen(false)}>Contacto</a></li>
+                <li><Link href="/#nuestros-servicios" className="text-white hover:text-cyan-300" onClick={() => setMenuOpen(false)}>Servicios</Link></li>
+                <li><Link href="/#por-que-qualister" className="text-white hover:text-cyan-300" onClick={() => setMenuOpen(false)}>Nosotros</Link></li>
+                <li><Link href="/#contacto" className="text-white hover:text-cyan-300" onClick={() => setMenuOpen(false)}>Contacto</Link></li>
                 <li>
-                  <a
-                    href="#contacto"
+                  <Link
+                    href="/#contacto"
                     onClick={() => setMenuOpen(false)}
                     className="block bg-cyan-500 hover:bg-cyan-600 text-white px-6 py-3 rounded transition"
                   >
                     Solicitar Cotización
-                  </a>
+                  </Link>
                 </li>
               </ul>
             </div>
