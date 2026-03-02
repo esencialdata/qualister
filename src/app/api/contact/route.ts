@@ -68,6 +68,7 @@ export async function POST(req: Request) {
     const secure = getEnv('SMTP_SECURE') === 'true';
 
     if (!host || !port || !user || !pass || !from) {
+      console.error('Missing SMTP env vars:', { host, port, user: !!user, pass: !!pass, from });
       return NextResponse.json(
         { error: 'La configuración de correo del servidor está incompleta.' },
         { status: 500 },
@@ -115,7 +116,8 @@ export async function POST(req: Request) {
     });
 
     return NextResponse.json({ ok: true }, { status: 200 });
-  } catch {
+  } catch (error) {
+    console.error('Error sending email:', error);
     return NextResponse.json(
       { error: 'No se pudo procesar la solicitud.' },
       { status: 500 },
