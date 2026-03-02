@@ -3,7 +3,7 @@ import nodemailer from 'nodemailer';
 
 export const runtime = 'nodejs';
 
-const DESTINATION_EMAIL = 'aaron@plasmar.mx';
+const DESTINATION_EMAIL = 'ventasqlm@qlm.mx';
 const EMAIL_REGEX = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
 type ContactPayload = {
